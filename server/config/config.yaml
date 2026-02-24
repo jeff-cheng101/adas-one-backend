@@ -1,0 +1,66 @@
+mode: development
+
+sessionTimeout: 1800
+# sessionTimeout: 30
+
+kibanaProtocol: https
+kibanaHost: adas-bde.twister5.cf
+kibanaSpace: adasone
+
+dailyReportCronTime: 0 0 0 * * *
+cleanupCronTime: 0 0 3 * * *
+monthlyTrafficCronTime: 0 0 5 * * *
+logPushCloudflareCronTime: 0 0 6 * * *
+
+axios:
+    ltmServer:
+        baseURL: https://202.39.33.231/
+        timeout: 50000
+        username: admin
+        password: twister5@office
+
+database:
+    mariaDB:
+        host: localhost
+        database: adas_one
+        username: twister5
+        password: twister5
+        dialect: mysql
+    redis:
+        host: localhost
+        port: 6379
+    elasticsearch:
+        host: https://localhost:9200
+        username: elastic
+        password: twister5@f5
+        cfIndex: across-cf-*
+        # apiKey: 
+        tls:
+            rejectUnauthorized: false
+
+
+cloudflare:
+    #Twister5
+    apiToken: WPvLXHH38dgnHK413Dac0C7nJvcb0CR8DWhE36Wq
+    accountId: e1ab85903e4701fa311b5270c16665f6
+    #apiToken: pP0PpIK-yRK9bBmId8ROHNCp4WpaVRVOTkQW9VnB
+    #accountId: 4338016ae2976df9baad445cd0901b21
+
+cato:
+    apiToken: 'F1E94C36C8921473BE05242192084756'
+    accountId: 16024
+    graphqlEndpoint: https://api.catonetworks.com/api/v1/graphql
+
+mailInfo:
+    host: msa.hinet.net
+    port: 25
+    secure: false
+    user: system@twister5.com.tw
+    pass: twister5
+    rejectUnauthorized: false
+    from: system@twister5.com.tw
+    contactMail: info@twister5.com.tw
+
+
+chromiumBrowser: /usr/bin/chromium-browser
+secr: adasonezmjwtsecret@f5
